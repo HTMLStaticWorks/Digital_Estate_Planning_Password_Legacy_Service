@@ -538,16 +538,11 @@ const pages = {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 class="font-heading text-3xl font-bold mb-12">Complete Activity Monitoring</h2>
           <div class="bg-gray-900 rounded-2xl p-8 max-w-4xl mx-auto text-left shadow-2xl relative">
-            <div class="absolute top-4 left-4 flex gap-2">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-gray-600"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
             <div class="mt-8 space-y-4 font-mono text-sm text-gray-300 overflow-x-auto pb-2 custom-scrollbar">
-              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-indigo-400 w-44 shrink-0">[2026-09-25 10:02]</span> <span class="text-green-400 w-24 shrink-0">SUCCESS</span> <span>Vault unlocked via Biometric (Device: iPhone 16)</span></div>
-              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-indigo-400 w-44 shrink-0">[2026-09-24 14:30]</span> <span class="text-blue-400 w-24 shrink-0">UPDATE</span> <span>Modified Legacy Contact: Sarah Jenkins</span></div>
-              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-indigo-400 w-44 shrink-0">[2026-09-20 09:15]</span> <span class="text-yellow-400 w-24 shrink-0">REQUEST</span> <span>Access request initiated by John Doe</span></div>
-              <div class="flex min-w-max"><span class="text-indigo-400 w-44 shrink-0">[2026-09-20 09:45]</span> <span class="text-red-400 w-24 shrink-0">DENIED</span> <span>Access request explicitly denied by Owner</span></div>
+              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-gray-400 w-44 shrink-0">[2026-09-25 10:02]</span> <span class="text-indigo-400 font-bold w-24 shrink-0">SUCCESS</span> <span>Vault unlocked via Biometric (Device: iPhone 16)</span></div>
+              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-gray-400 w-44 shrink-0">[2026-09-24 14:30]</span> <span class="text-indigo-400 font-bold w-24 shrink-0">UPDATE</span> <span>Modified Legacy Contact: Sarah Jenkins</span></div>
+              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-gray-400 w-44 shrink-0">[2026-09-20 09:15]</span> <span class="text-indigo-400 font-bold w-24 shrink-0">REQUEST</span> <span>Access request initiated by John Doe</span></div>
+              <div class="flex min-w-max"><span class="text-gray-400 w-44 shrink-0">[2026-09-20 09:45]</span> <span class="text-indigo-400 font-bold w-24 shrink-0">DENIED</span> <span>Access request explicitly denied by Owner</span></div>
             </div>
           </div>
         </div>
@@ -863,7 +858,7 @@ const pages = {
               <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
                 <h4 class="font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider text-sm">Follow Us</h4>
                 <div class="flex space-x-4 rtl:space-x-reverse">
-                  <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-twitter"></i></a>
                   <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-linkedin"></i></a>
                   <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-facebook"></i></a>
                   <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
@@ -906,7 +901,7 @@ const pages = {
 
       <!-- Section 4: Map -->
       <section class="w-full">
-        <div class="w-full min-h-[400px] bg-gray-200 dark:bg-gray-800 flex relative">
+        <div class="w-full h-[400px] md:h-[500px] bg-gray-200 dark:bg-gray-800 relative">
           <!-- Placeholder map -->
           <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1689260555555!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -917,24 +912,24 @@ const pages = {
         <div class="max-w-4xl mx-auto px-4">
           <h2 class="font-heading text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
           <div class="space-y-4">
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
-              <button class="w-full flex justify-between items-center gap-4 text-left group">
+            <details class="group bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+              <summary class="w-full flex justify-between items-center gap-4 text-left cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                 <span class="font-bold text-lg">How secure is my data?</span>
-                <i class="fa-solid fa-chevron-down flex-shrink-0 text-gray-500 group-hover:text-indigo-600 transition"></i>
-              </button>
+                <i class="fa-solid fa-chevron-down flex-shrink-0 text-gray-500 group-hover:text-indigo-600 transition group-open:rotate-180"></i>
+              </summary>
               <div class="mt-4">
                 <p class="text-gray-600 dark:text-gray-400 text-sm">We use end-to-end AES-256 encryption. Our zero-knowledge architecture ensures that not even our employees can access your unencrypted data.</p>
               </div>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
-              <button class="w-full flex justify-between items-center gap-4 text-left group">
+            </details>
+            <details class="group bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+              <summary class="w-full flex justify-between items-center gap-4 text-left cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                 <span class="font-bold text-lg">How does a legacy contact get access?</span>
-                <i class="fa-solid fa-chevron-down flex-shrink-0 text-gray-500 group-hover:text-indigo-600 transition"></i>
-              </button>
+                <i class="fa-solid fa-chevron-down flex-shrink-0 text-gray-500 group-hover:text-indigo-600 transition group-open:rotate-180"></i>
+              </summary>
               <div class="mt-4">
                 <p class="text-gray-600 dark:text-gray-400 text-sm">A contact must request access. You specify a wait period (e.g., 7 days). If you do not explicitly deny the request within that time, the vault is released to them.</p>
               </div>
-            </div>
+            </details>
           </div>
         </div>
       </section>
