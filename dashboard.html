@@ -61,38 +61,102 @@
   
   
 
-  <main class="flex-grow flex flex-col w-full">
-    
-      <!-- Dashboard Mini Header -->
-      <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center">
-              <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:bg-indigo-700 transition">
-                  <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <span class="font-bold text-xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
-              </a>
-            </div>
-            <!-- Toggles -->
-            <div class="flex items-center gap-4">
-              <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
-                <i class="fa-solid fa-moon dark:hidden"></i>
-                <i class="fa-solid fa-sun hidden dark:block"></i>
-              </button>
-              <button id="rtl-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition font-bold text-sm" aria-label="Toggle RTL">
-                RTL
-              </button>
-            </div>
+  <div class="flex h-screen bg-gray-50 dark:bg-gray-950 overflow-hidden w-full">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 flex-shrink-0 hidden lg:flex flex-col">
+      <!-- Logo -->
+      <div class="h-16 flex items-center px-6 border-b border-gray-200 dark:border-gray-800">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:bg-indigo-700 transition">
+            <i class="fa-solid fa-shield-halved"></i>
           </div>
+          <span class="font-bold text-xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+        </a>
+      </div>
+      <!-- Navigation Links -->
+      <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+        <a href="#overview" class="flex items-center gap-3 px-3 py-2.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-lg font-medium">
+          <i class="fa-solid fa-house w-5"></i> Dashboard
+        </a>
+        <a href="#accounts" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+          <i class="fa-solid fa-vault w-5"></i> Account Vault
+        </a>
+        <a href="#documents" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+          <i class="fa-solid fa-file-pdf w-5"></i> Documents
+        </a>
+        <a href="#contacts" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+          <i class="fa-solid fa-user-shield w-5"></i> Contacts
+        </a>
+        <a href="#activity" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+          <i class="fa-solid fa-clock-rotate-left w-5"></i> Activity Log
+        </a>
+      </nav>
+      <!-- Bottom Actions -->
+      <div class="p-4 border-t border-gray-200 dark:border-gray-800">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+          <i class="fa-solid fa-arrow-right-from-bracket w-5"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+      <!-- Top Header -->
+      <header class="h-16 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-4 sm:px-6 lg:px-8 flex-shrink-0">
+        <div class="flex items-center gap-2 sm:gap-4">
+          <!-- Mobile Menu Toggle -->
+          <button id="dashboard-menu-btn" class="lg:hidden text-gray-600 dark:text-gray-300 hover:text-indigo-600 p-2">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+          <!-- Mobile Logo (visible only on small screens) -->
+          <a href="index.html" class="lg:hidden flex items-center gap-2 group">
+            <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <span class="font-bold text-lg sm:text-xl text-gray-900 dark:text-white tracking-tight whitespace-nowrap">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+          </a>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+          <button id="theme-toggle" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon dark:hidden text-sm sm:text-base"></i>
+            <i class="fa-solid fa-sun hidden dark:block text-sm sm:text-base"></i>
+          </button>
+          <button id="rtl-toggle" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition font-bold text-xs sm:text-sm" aria-label="Toggle RTL">
+            RTL
+          </button>
         </div>
       </header>
 
-      <!-- Dashboard Container -->
-      <div class="flex-grow w-full bg-gray-50 dark:bg-gray-950 py-6 sm:py-8">
-        <div class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <!-- Dashboard Mobile Menu Dropdown -->
+      <div id="dashboard-mobile-menu" class="hidden lg:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-xl fixed w-full left-0 z-50 top-16">
+        <nav class="px-4 pt-2 pb-6 space-y-2 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <a href="#overview" class="flex items-center gap-3 px-3 py-2.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-lg font-medium">
+            <i class="fa-solid fa-house w-5 text-center"></i> Dashboard
+          </a>
+          <a href="#accounts" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+            <i class="fa-solid fa-vault w-5 text-center"></i> Account Vault
+          </a>
+          <a href="#documents" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+            <i class="fa-solid fa-file-pdf w-5 text-center"></i> Documents
+          </a>
+          <a href="#contacts" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+            <i class="fa-solid fa-user-shield w-5 text-center"></i> Contacts
+          </a>
+          <a href="#activity" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+            <i class="fa-solid fa-clock-rotate-left w-5 text-center"></i> Activity Log
+          </a>
+          <div class="border-t border-gray-200 dark:border-gray-800 pt-4 mt-4">
+            <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+              <i class="fa-solid fa-arrow-right-from-bracket w-5 text-center"></i> Logout
+            </a>
+          </div>
+        </nav>
+      </div>
+
+
+      <!-- Scrollable Main Content -->
+      <main class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 scroll-smooth">
+        <div class="max-w-6xl mx-auto">
           
           <!-- Page Header -->
           <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -108,7 +172,7 @@
           </div>
 
           <!-- Section 1: Dashboard Overview -->
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
+          <div id="overview" class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
               <div class="flex justify-between items-start mb-4">
                 <div class="text-gray-500 text-sm font-medium">Protected Accounts</div>
@@ -139,12 +203,12 @@
             </div>
           </div>
 
-          <div class="grid lg:grid-cols-3 gap-8">
+          <div class="grid xl:grid-cols-3 gap-8">
             <!-- Main Content Column -->
-            <div class="lg:col-span-2 space-y-8">
+            <div class="xl:col-span-2 space-y-8">
               
               <!-- Section 2: Digital Account Vault -->
-              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+              <div id="accounts" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
                 <div class="p-4 sm:p-6 border-b border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 bg-gray-50 dark:bg-gray-800/50">
                   <h3 class="font-bold text-lg"><i class="fa-solid fa-vault text-indigo-500 mr-2"></i> Account Vault</h3>
                   <div class="relative w-full sm:w-auto">
@@ -189,13 +253,52 @@
                           <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
                         </td>
                       </tr>
+                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                        <td class="px-3 sm:px-6 py-4 font-medium">
+                          <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0"><i class="fa-brands fa-google"></i></div>
+                            Gmail Primary
+                          </div>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Email</span></td>
+                        <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">1 week ago</td>
+                        <td class="px-3 sm:px-6 py-4 text-right">
+                          <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                        </td>
+                      </tr>
+                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                        <td class="px-3 sm:px-6 py-4 font-medium">
+                          <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white flex items-center justify-center flex-shrink-0"><i class="fa-brands fa-apple"></i></div>
+                            Apple ID
+                          </div>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Personal</span></td>
+                        <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">2 months ago</td>
+                        <td class="px-3 sm:px-6 py-4 text-right">
+                          <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                        </td>
+                      </tr>
+                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                        <td class="px-3 sm:px-6 py-4 font-medium">
+                          <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-chart-line"></i></div>
+                            Vanguard 401(k)
+                          </div>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Financial</span></td>
+                        <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">3 days ago</td>
+                        <td class="px-3 sm:px-6 py-4 text-right">
+                          <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
 
               <!-- Section 4: Document Vault -->
-              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+              <div id="documents" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
                 <div class="p-6 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center bg-gray-50 dark:bg-gray-800/50">
                   <h3 class="font-bold text-lg"><i class="fa-solid fa-file-pdf text-indigo-500 mr-2"></i> Encrypted Documents</h3>
                   <button class="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline">Upload</button>
@@ -215,16 +318,37 @@
                        <p class="text-xs text-gray-500">1.2 GB • Personal</p>
                      </div>
                    </div>
+                   <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
+                     <i class="fa-solid fa-file-invoice-dollar text-3xl text-gray-400"></i>
+                     <div class="min-w-0 flex-1">
+                       <h4 class="font-bold text-sm truncate" title="Property_Deed.pdf">Property_Deed.pdf</h4>
+                       <p class="text-xs text-gray-500">1.1 MB • Property</p>
+                     </div>
+                   </div>
+                   <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
+                     <i class="fa-solid fa-file-medical text-3xl text-gray-400"></i>
+                     <div class="min-w-0 flex-1">
+                       <h4 class="font-bold text-sm truncate" title="Health_Directives.pdf">Health_Directives.pdf</h4>
+                       <p class="text-xs text-gray-500">845 KB • Health</p>
+                     </div>
+                   </div>
+                   <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer sm:col-span-2">
+                     <i class="fa-solid fa-key text-3xl text-gray-400"></i>
+                     <div class="min-w-0 flex-1">
+                       <h4 class="font-bold text-sm truncate" title="Crypto_Wallet_Keys.txt">Crypto_Wallet_Keys.txt</h4>
+                       <p class="text-xs text-gray-500">12 KB • Financial</p>
+                     </div>
+                   </div>
                 </div>
               </div>
 
             </div>
             
-            <!-- Sidebar Column -->
+            <!-- Sidebar / Right Column Content -->
             <div class="space-y-8">
               
               <!-- Section 3: Legacy Contacts -->
-              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+              <div id="contacts" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
                 <div class="p-6 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
                   <h3 class="font-bold text-lg"><i class="fa-solid fa-user-shield text-indigo-500 mr-2"></i> Legacy Contacts</h3>
                 </div>
@@ -239,12 +363,32 @@
                     </div>
                     <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                   </div>
-                  <div class="flex items-center justify-between">
+                  <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
                     <div class="flex items-center gap-3">
                       <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">MD</div>
                       <div>
                         <h4 class="font-bold text-sm">Michael Doe</h4>
                         <p class="text-xs text-gray-500">Attorney • Legal Only</p>
+                      </div>
+                    </div>
+                    <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                  </div>
+                  <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">DS</div>
+                      <div>
+                        <h4 class="font-bold text-sm">David Smith</h4>
+                        <p class="text-xs text-gray-500">Brother • Full Access</p>
+                      </div>
+                    </div>
+                    <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">ED</div>
+                      <div>
+                        <h4 class="font-bold text-sm">Emma Davis</h4>
+                        <p class="text-xs text-gray-500">Daughter • Limited Access</p>
                       </div>
                     </div>
                     <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
@@ -256,7 +400,7 @@
               </div>
 
               <!-- Section 5: Activity Log -->
-              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+              <div id="activity" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
                 <div class="p-6 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
                   <h3 class="font-bold text-lg"><i class="fa-solid fa-clock-rotate-left text-indigo-500 mr-2"></i> Security Log</h3>
                 </div>
@@ -273,6 +417,16 @@
                       <p class="text-xs text-gray-500">Yesterday, 4:30 PM</p>
                     </li>
                     <li class="relative">
+                      <div class="absolute w-2 h-2 rounded-full bg-purple-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                      <p class="text-sm font-medium">Contact viewed document</p>
+                      <p class="text-xs text-gray-500">Sept 24, 2:15 PM • Sarah Jenkins accessed Last Will</p>
+                    </li>
+                    <li class="relative">
+                      <div class="absolute w-2 h-2 rounded-full bg-indigo-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                      <p class="text-sm font-medium">Security settings updated</p>
+                      <p class="text-xs text-gray-500">Sept 24, 9:00 AM • 2FA enabled</p>
+                    </li>
+                    <li class="relative">
                       <div class="absolute w-2 h-2 rounded-full bg-yellow-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
                       <p class="text-sm font-medium">Master password verified</p>
                       <p class="text-xs text-gray-500">Sept 23, 11:15 AM</p>
@@ -285,12 +439,53 @@
             </div>
           </div>
         </div>
-      </div>
-    
-  </main>
+      </main>
+    </div>
+  </div>
 
   
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Setup mobile menu toggle
+      const dashboardMenuBtn = document.getElementById('dashboard-menu-btn');
+      const dashboardMobileMenu = document.getElementById('dashboard-mobile-menu');
+      
+      if (dashboardMenuBtn && dashboardMobileMenu) {
+        dashboardMenuBtn.addEventListener('click', () => {
+          dashboardMobileMenu.classList.toggle('hidden');
+        });
+      }
 
+      // Handle active state for both sidebar and mobile menu links
+      const allNavLinks = document.querySelectorAll('aside nav a, #dashboard-mobile-menu nav a:not([href="index.html"])');
+      const activeClasses = ['bg-indigo-50', 'dark:bg-indigo-900/30', 'text-indigo-600', 'dark:text-indigo-400'];
+      const inactiveClasses = ['text-gray-600', 'dark:text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-gray-800'];
+
+      allNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const targetHref = link.getAttribute('href');
+          
+          // Remove active styles from all links
+          allNavLinks.forEach(l => {
+            l.classList.remove(...activeClasses);
+            l.classList.add(...inactiveClasses);
+          });
+          
+          // Add active styles to clicked links (both mobile and desktop for same href)
+          const relatedLinks = document.querySelectorAll(`aside nav a[href="${targetHref}"], #dashboard-mobile-menu nav a[href="${targetHref}"]`);
+          relatedLinks.forEach(relatedLink => {
+            relatedLink.classList.remove(...inactiveClasses);
+            relatedLink.classList.add(...activeClasses);
+          });
+          
+          // Close mobile menu if clicked inside it
+          if (dashboardMobileMenu && !dashboardMobileMenu.classList.contains('hidden')) {
+            dashboardMobileMenu.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

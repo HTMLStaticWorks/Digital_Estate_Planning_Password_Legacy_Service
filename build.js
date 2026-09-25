@@ -148,16 +148,7 @@ const footerHTML = `
         <p class="text-gray-500 dark:text-gray-500 text-sm">
           &copy; 2026 LegacyVault Inc. All rights reserved. Built with military-grade encryption.
         </p>
-        <div class="flex items-center gap-4">
-          <div class="flex items-center gap-2 text-sm text-gray-500">
-            <i class="fa-solid fa-lock text-green-500"></i>
-            <span>256-bit AES Encryption</span>
-          </div>
-          <div class="flex items-center gap-2 text-sm text-gray-500">
-            <i class="fa-solid fa-server text-indigo-500"></i>
-            <span>Zero-Knowledge Architecture</span>
-          </div>
-        </div>
+
       </div>
     </div>
   </footer>
@@ -298,36 +289,44 @@ const pages = {
           </div>
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Card 1 -->
-            <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-800 group">
-              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-800 group overflow-hidden">
+              <div class="w-full h-40 mb-6 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Locked device" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Locked Accounts</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">Financial and email accounts become permanently locked without proper credentials, causing severe administrative issues.</p>
+              <div class="px-8 pb-8">
+                <h3 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Locked Accounts</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">Financial and email accounts become permanently locked without proper credentials, causing severe administrative issues.</p>
+              </div>
             </div>
             <!-- Card 2 -->
-            <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-800 group">
-              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-800 group overflow-hidden">
+              <div class="w-full h-40 mb-6 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Credit card" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Ongoing Subscriptions</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">Auto-renewing services continue draining funds because family members cannot log in to cancel them.</p>
+              <div class="px-8 pb-8">
+                <h3 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Ongoing Subscriptions</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">Auto-renewing services continue draining funds because family members cannot log in to cancel them.</p>
+              </div>
             </div>
             <!-- Card 3 -->
-            <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-800 group">
-              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-800 group overflow-hidden">
+              <div class="w-full h-40 mb-6 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Old photos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Lost Memories</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">Precious family photos, videos, and documents stored in cloud services can be lost forever.</p>
+              <div class="px-8 pb-8">
+                <h3 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Lost Memories</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">Precious family photos, videos, and documents stored in cloud services can be lost forever.</p>
+              </div>
             </div>
             <!-- Card 4 -->
-            <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-800 group">
-              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-800 group overflow-hidden">
+              <div class="w-full h-40 mb-6 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Digital assets" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Trapped Assets</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">Cryptocurrency, domain names, and digital portfolios become entirely inaccessible to beneficiaries.</p>
+              <div class="px-8 pb-8">
+                <h3 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Trapped Assets</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">Cryptocurrency, domain names, and digital portfolios become entirely inaccessible to beneficiaries.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -389,22 +388,22 @@ const pages = {
           
           <div class="grid sm:grid-cols-3 gap-6 text-left mt-16 border-t border-gray-800 pt-16">
             <div class="bg-gray-800/40 rounded-2xl p-6 border border-gray-700/50">
-              <div class="flex items-center gap-3 mb-3">
-                <i class="fa-solid fa-key text-indigo-400 text-xl flex-shrink-0"></i>
+              <div class="flex items-start gap-3 mb-3 min-h-[3.5rem]">
+                <i class="fa-solid fa-key text-indigo-400 text-xl flex-shrink-0 mt-0.5"></i>
                 <h4 class="font-bold text-lg leading-tight">AES-256 Encryption</h4>
               </div>
               <p class="text-gray-400 text-sm leading-relaxed">The gold standard in data protection, ensuring your digital estate remains invulnerable to breaches.</p>
             </div>
             <div class="bg-gray-800/40 rounded-2xl p-6 border border-gray-700/50">
-              <div class="flex items-center gap-3 mb-3">
-                <i class="fa-solid fa-fingerprint text-indigo-400 text-xl flex-shrink-0"></i>
+              <div class="flex items-start gap-3 mb-3 min-h-[3.5rem]">
+                <i class="fa-solid fa-fingerprint text-indigo-400 text-xl flex-shrink-0 mt-0.5"></i>
                 <h4 class="font-bold text-lg leading-tight">Biometric Auth</h4>
               </div>
               <p class="text-gray-400 text-sm leading-relaxed">Strict multi-factor and biometric authentication requirements for all vault interactions.</p>
             </div>
             <div class="bg-gray-800/40 rounded-2xl p-6 border border-gray-700/50">
-              <div class="flex items-center gap-3 mb-3">
-                <i class="fa-solid fa-eye-slash text-indigo-400 text-xl flex-shrink-0"></i>
+              <div class="flex items-start gap-3 mb-3 min-h-[3.5rem]">
+                <i class="fa-solid fa-eye-slash text-indigo-400 text-xl flex-shrink-0 mt-0.5"></i>
                 <h4 class="font-bold text-lg leading-tight">Zero-Knowledge</h4>
               </div>
               <p class="text-gray-400 text-sm leading-relaxed">Our team never has the decryption keys. Your legacy is exclusively yours to control.</p>
@@ -472,26 +471,32 @@ const pages = {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group">
-              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+            <div class="border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group overflow-hidden">
+              <div class="w-full h-40 mb-6 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Category Organization" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-bold text-xl mb-2">Category Organization</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">Tag and group accounts by Financial, Social, Utilities, and more for easy retrieval.</p>
+              <div class="px-6 pb-6">
+                <h3 class="font-bold text-xl mb-2">Category Organization</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Tag and group accounts by Financial, Social, Utilities, and more for easy retrieval.</p>
+              </div>
             </div>
-            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group">
-              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+            <div class="border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group overflow-hidden">
+              <div class="w-full h-40 mb-6 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Document Encryption" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-bold text-xl mb-2">Document Encryption</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">Upload wills, trusts, and deeds. They remain encrypted until release triggers are met.</p>
+              <div class="px-6 pb-6">
+                <h3 class="font-bold text-xl mb-2">Document Encryption</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Upload wills, trusts, and deeds. They remain encrypted until release triggers are met.</p>
+              </div>
             </div>
-            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group">
-              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+            <div class="border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group overflow-hidden">
+              <div class="w-full h-40 mb-6 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Auto-Sync Passwords" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-bold text-xl mb-2">Auto-Sync Passwords</h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">Keep your legacy credentials up-to-date automatically using our secure browser extensions.</p>
+              <div class="px-6 pb-6">
+                <h3 class="font-bold text-xl mb-2">Auto-Sync Passwords</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Keep your legacy credentials up-to-date automatically using our secure browser extensions.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -535,14 +540,14 @@ const pages = {
           <div class="bg-gray-900 rounded-2xl p-8 max-w-4xl mx-auto text-left shadow-2xl relative">
             <div class="absolute top-4 left-4 flex gap-2">
               <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-gray-600"></div>
               <div class="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <div class="mt-8 space-y-4 font-mono text-sm text-gray-300">
-              <div class="flex border-b border-gray-800 pb-2"><span class="text-indigo-400 w-40">[2026-09-25 10:02]</span> <span class="text-green-400 w-24">SUCCESS</span> <span>Vault unlocked via Biometric (Device: iPhone 16)</span></div>
-              <div class="flex border-b border-gray-800 pb-2"><span class="text-indigo-400 w-40">[2026-09-24 14:30]</span> <span class="text-blue-400 w-24">UPDATE</span> <span>Modified Legacy Contact: Sarah Jenkins</span></div>
-              <div class="flex border-b border-gray-800 pb-2"><span class="text-indigo-400 w-40">[2026-09-20 09:15]</span> <span class="text-yellow-400 w-24">REQUEST</span> <span>Access request initiated by John Doe</span></div>
-              <div class="flex"><span class="text-indigo-400 w-40">[2026-09-20 09:45]</span> <span class="text-red-400 w-24">DENIED</span> <span>Access request explicitly denied by Owner</span></div>
+            <div class="mt-8 space-y-4 font-mono text-sm text-gray-300 overflow-x-auto pb-2 custom-scrollbar">
+              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-indigo-400 w-44 shrink-0">[2026-09-25 10:02]</span> <span class="text-green-400 w-24 shrink-0">SUCCESS</span> <span>Vault unlocked via Biometric (Device: iPhone 16)</span></div>
+              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-indigo-400 w-44 shrink-0">[2026-09-24 14:30]</span> <span class="text-blue-400 w-24 shrink-0">UPDATE</span> <span>Modified Legacy Contact: Sarah Jenkins</span></div>
+              <div class="flex min-w-max border-b border-gray-800 pb-2"><span class="text-indigo-400 w-44 shrink-0">[2026-09-20 09:15]</span> <span class="text-yellow-400 w-24 shrink-0">REQUEST</span> <span>Access request initiated by John Doe</span></div>
+              <div class="flex min-w-max"><span class="text-indigo-400 w-44 shrink-0">[2026-09-20 09:45]</span> <span class="text-red-400 w-24 shrink-0">DENIED</span> <span>Access request explicitly denied by Owner</span></div>
             </div>
           </div>
         </div>
@@ -643,19 +648,19 @@ const pages = {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 class="font-heading text-3xl font-bold mb-12">The Implementation Process</h2>
           <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 relative">
-             <div class="bg-gray-50 dark:bg-gray-800 w-48 h-48 rounded-full flex flex-col items-center justify-center border-4 border-indigo-100 dark:border-indigo-900/50 shadow-lg z-10">
+             <div class="bg-gray-50 dark:bg-gray-800 w-48 h-48 md:w-40 md:h-40 lg:w-48 lg:h-48 shrink-0 rounded-full flex flex-col items-center justify-center border-4 border-indigo-100 dark:border-indigo-900/50 shadow-lg z-10">
                <i class="fa-solid fa-vault text-2xl text-indigo-600 dark:text-indigo-400 mb-2"></i>
-               <span class="font-bold">1. Setup Vault</span>
+               <span class="font-bold text-sm lg:text-base">1. Setup Vault</span>
              </div>
-             <div class="hidden md:block w-24 h-1 bg-indigo-200 dark:bg-indigo-800"></div>
-             <div class="bg-gray-50 dark:bg-gray-800 w-48 h-48 rounded-full flex flex-col items-center justify-center border-4 border-indigo-100 dark:border-indigo-900/50 shadow-lg z-10">
+             <div class="hidden md:block w-8 lg:w-24 shrink-0 h-1 bg-indigo-200 dark:bg-indigo-800"></div>
+             <div class="bg-gray-50 dark:bg-gray-800 w-48 h-48 md:w-40 md:h-40 lg:w-48 lg:h-48 shrink-0 rounded-full flex flex-col items-center justify-center border-4 border-indigo-100 dark:border-indigo-900/50 shadow-lg z-10">
                <i class="fa-solid fa-users text-2xl text-indigo-600 dark:text-indigo-400 mb-2"></i>
-               <span class="font-bold">2. Add Contacts</span>
+               <span class="font-bold text-sm lg:text-base text-center px-4">2. Add Contacts</span>
              </div>
-             <div class="hidden md:block w-24 h-1 bg-indigo-200 dark:bg-indigo-800"></div>
-             <div class="bg-gray-50 dark:bg-gray-800 w-48 h-48 rounded-full flex flex-col items-center justify-center border-4 border-indigo-100 dark:border-indigo-900/50 shadow-lg z-10">
+             <div class="hidden md:block w-8 lg:w-24 shrink-0 h-1 bg-indigo-200 dark:bg-indigo-800"></div>
+             <div class="bg-gray-50 dark:bg-gray-800 w-48 h-48 md:w-40 md:h-40 lg:w-48 lg:h-48 shrink-0 rounded-full flex flex-col items-center justify-center border-4 border-indigo-100 dark:border-indigo-900/50 shadow-lg z-10">
                <i class="fa-solid fa-shield-heart text-2xl text-indigo-600 dark:text-indigo-400 mb-2"></i>
-               <span class="font-bold">3. Rest Easy</span>
+               <span class="font-bold text-sm lg:text-base">3. Rest Easy</span>
              </div>
           </div>
         </div>
@@ -719,7 +724,7 @@ const pages = {
               <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Security" class="h-48 w-full object-cover group-hover:scale-105 transition duration-300">
               <div class="p-6 flex-grow flex flex-col">
                 <span class="text-xs font-bold text-indigo-500 uppercase mb-2">Privacy</span>
-                <h4 class="font-bold text-lg mb-2 sm:min-h-[3.5rem]">Understanding Zero-Knowledge Encryption</h4>
+                <h4 class="font-bold text-lg mb-2 sm:min-h-[5.5rem]">Understanding Zero-Knowledge Encryption</h4>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">How modern cryptography ensures even service providers cannot read your personal data.</p>
                 <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
                   <span class="text-xs text-gray-500">Sept 10, 2026</span>
@@ -731,7 +736,7 @@ const pages = {
               <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Coding" class="h-48 w-full object-cover group-hover:scale-105 transition duration-300">
               <div class="p-6 flex-grow flex flex-col">
                 <span class="text-xs font-bold text-indigo-500 uppercase mb-2">Passwords</span>
-                <h4 class="font-bold text-lg mb-2 sm:min-h-[3.5rem]">Password Manager vs. Legacy Vault</h4>
+                <h4 class="font-bold text-lg mb-2 sm:min-h-[5.5rem]">Password Manager vs. Legacy Vault</h4>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">What is the difference between a daily password manager and a long-term legacy vault?</p>
                 <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
                   <span class="text-xs text-gray-500">Sept 05, 2026</span>
@@ -743,7 +748,7 @@ const pages = {
               <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Money" class="h-48 w-full object-cover group-hover:scale-105 transition duration-300">
               <div class="p-6 flex-grow flex flex-col">
                 <span class="text-xs font-bold text-indigo-500 uppercase mb-2">Threats</span>
-                <h4 class="font-bold text-lg mb-2 sm:min-h-[3.5rem]">Protecting Crypto Assets Post-Mortem</h4>
+                <h4 class="font-bold text-lg mb-2 sm:min-h-[5.5rem]">Protecting Crypto Assets Post-Mortem</h4>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">How to securely transfer hardware wallets and seed phrases without risking exposure.</p>
                 <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
                   <span class="text-xs text-gray-500">Aug 28, 2026</span>
@@ -761,19 +766,19 @@ const pages = {
           <h2 class="font-heading text-2xl font-bold mb-8">Legacy Planning</h2>
           <div class="grid md:grid-cols-2 gap-8">
              <!-- Large Card -->
-             <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 flex">
-               <div class="p-6 flex flex-col justify-center">
+             <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 flex flex-col h-full">
+               <div class="p-6 flex flex-col flex-grow">
                  <span class="text-xs font-bold text-indigo-500 uppercase mb-2">Guide</span>
-                 <h4 class="font-bold text-xl mb-3">Choosing Your Legacy Contacts</h4>
-                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Guidelines for selecting reliable individuals to execute your digital estate.</p>
+                 <h4 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Choosing Your Legacy Contacts</h4>
+                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">Guidelines for selecting reliable individuals to execute your digital estate.</p>
                  <a href="#" class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mt-auto">Read Guide</a>
                </div>
              </div>
-             <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 flex">
-               <div class="p-6 flex flex-col justify-center">
+             <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 flex flex-col h-full">
+               <div class="p-6 flex flex-col flex-grow">
                  <span class="text-xs font-bold text-indigo-500 uppercase mb-2">Legal</span>
-                 <h4 class="font-bold text-xl mb-3">Social Media Memorialization</h4>
-                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">How different platforms handle accounts after death and how to prepare.</p>
+                 <h4 class="font-bold text-xl mb-3 sm:min-h-[3.5rem]">Social Media Memorialization</h4>
+                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">How different platforms handle accounts after death and how to prepare.</p>
                  <a href="#" class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mt-auto">Read Guide</a>
                </div>
              </div>
@@ -854,6 +859,16 @@ const pages = {
                   </div>
                 </div>
               </div>
+              
+              <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider text-sm">Follow Us</h4>
+                <div class="flex space-x-4 rtl:space-x-reverse">
+                  <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-600 hover:text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
             </div>
 
             <!-- Form -->
@@ -890,10 +905,10 @@ const pages = {
       </section>
 
       <!-- Section 4: Map -->
-      <section class="py-0">
-        <div class="w-full h-96 bg-gray-200 dark:bg-gray-800 relative">
+      <section class="w-full">
+        <div class="w-full min-h-[400px] bg-gray-200 dark:bg-gray-800 flex relative">
           <!-- Placeholder map -->
-          <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1689260555555!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1689260555555!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
 
@@ -903,12 +918,22 @@ const pages = {
           <h2 class="font-heading text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
           <div class="space-y-4">
             <div class="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
-              <h4 class="font-bold text-lg mb-2">How secure is my data?</h4>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">We use end-to-end AES-256 encryption. Our zero-knowledge architecture ensures that not even our employees can access your unencrypted data.</p>
+              <button class="w-full flex justify-between items-center gap-4 text-left group">
+                <span class="font-bold text-lg">How secure is my data?</span>
+                <i class="fa-solid fa-chevron-down flex-shrink-0 text-gray-500 group-hover:text-indigo-600 transition"></i>
+              </button>
+              <div class="mt-4">
+                <p class="text-gray-600 dark:text-gray-400 text-sm">We use end-to-end AES-256 encryption. Our zero-knowledge architecture ensures that not even our employees can access your unencrypted data.</p>
+              </div>
             </div>
             <div class="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
-              <h4 class="font-bold text-lg mb-2">How does a legacy contact get access?</h4>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">A contact must request access. You specify a wait period (e.g., 7 days). If you do not explicitly deny the request within that time, the vault is released to them.</p>
+              <button class="w-full flex justify-between items-center gap-4 text-left group">
+                <span class="font-bold text-lg">How does a legacy contact get access?</span>
+                <i class="fa-solid fa-chevron-down flex-shrink-0 text-gray-500 group-hover:text-indigo-600 transition"></i>
+              </button>
+              <div class="mt-4">
+                <p class="text-gray-600 dark:text-gray-400 text-sm">A contact must request access. You specify a wait period (e.g., 7 days). If you do not explicitly deny the request within that time, the vault is released to them.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -956,9 +981,8 @@ const pages = {
                 </div>
                 
                 <div>
-                  <div class="flex justify-between items-center mb-1">
+                  <div class="mb-1">
                     <label class="block text-sm font-medium">Password</label>
-                    <a href="#" class="text-xs text-indigo-600 dark:text-indigo-400 hover:underline">Forgot password?</a>
                   </div>
                   <div class="relative">
                     <input type="password" id="login-password" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 outline-none transition">
@@ -968,9 +992,12 @@ const pages = {
                   </div>
                 </div>
 
-                <div class="flex items-center">
-                  <input type="checkbox" id="remember" class="w-4 h-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                  <label for="remember" class="ml-2 text-sm text-gray-600 dark:text-gray-400">Remember this device</label>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center">
+                    <input type="checkbox" id="remember" class="w-4 h-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="remember" class="ml-2 text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Remember Me</label>
+                  </div>
+                  <a href="#" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline whitespace-nowrap">Forgot Password?</a>
                 </div>
 
                 <button type="submit" class="w-full py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg transition shadow-lg shadow-indigo-600/30 text-lg">
@@ -1105,7 +1132,7 @@ const pages = {
 
             <!-- Footer Link -->
             <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800">
-              <p class="text-center text-gray-600 dark:text-gray-400 text-sm">
+              <p class="text-center text-gray-600 dark:text-gray-400 text-sm whitespace-nowrap">
                 Already have a vault? 
                 <a href="login.html" class="font-medium text-indigo-600 dark:text-indigo-400 hover:underline">Authenticate Here</a>
               </p>
@@ -1125,229 +1152,428 @@ const pages = {
     title: 'Dashboard',
     hasHeaderFooter: false,
     content: `
-      <!-- Dashboard Mini Header -->
-      <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center">
-              <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:bg-indigo-700 transition">
+      <div class="flex h-screen bg-gray-50 dark:bg-gray-950 overflow-hidden w-full">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 flex-shrink-0 hidden lg:flex flex-col">
+          <!-- Logo -->
+          <div class="h-16 flex items-center px-6 border-b border-gray-200 dark:border-gray-800">
+            <a href="index.html" class="flex items-center gap-2 group">
+              <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:bg-indigo-700 transition">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <span class="font-bold text-xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+            </a>
+          </div>
+          <!-- Navigation Links -->
+          <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+            <a href="#overview" class="flex items-center gap-3 px-3 py-2.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-lg font-medium">
+              <i class="fa-solid fa-house w-5"></i> Dashboard
+            </a>
+            <a href="#accounts" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+              <i class="fa-solid fa-vault w-5"></i> Account Vault
+            </a>
+            <a href="#documents" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+              <i class="fa-solid fa-file-pdf w-5"></i> Documents
+            </a>
+            <a href="#contacts" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+              <i class="fa-solid fa-user-shield w-5"></i> Contacts
+            </a>
+            <a href="#activity" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+              <i class="fa-solid fa-clock-rotate-left w-5"></i> Activity Log
+            </a>
+          </nav>
+          <!-- Bottom Actions -->
+          <div class="p-4 border-t border-gray-200 dark:border-gray-800">
+            <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+              <i class="fa-solid fa-arrow-right-from-bracket w-5"></i> Logout
+            </a>
+          </div>
+        </aside>
+
+        <!-- Main Wrapper -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+          <!-- Top Header -->
+          <header class="h-16 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-4 sm:px-6 lg:px-8 flex-shrink-0">
+            <div class="flex items-center gap-2 sm:gap-4">
+              <!-- Mobile Menu Toggle -->
+              <button id="dashboard-menu-btn" class="lg:hidden text-gray-600 dark:text-gray-300 hover:text-indigo-600 p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+              </button>
+              <!-- Mobile Logo (visible only on small screens) -->
+              <a href="index.html" class="lg:hidden flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
                   <i class="fa-solid fa-shield-halved"></i>
                 </div>
-                <span class="font-bold text-xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+                <span class="font-bold text-lg sm:text-xl text-gray-900 dark:text-white tracking-tight whitespace-nowrap">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
               </a>
             </div>
-            <!-- Toggles -->
-            <div class="flex items-center gap-4">
-              <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
-                <i class="fa-solid fa-moon dark:hidden"></i>
-                <i class="fa-solid fa-sun hidden dark:block"></i>
+            <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+              <button id="theme-toggle" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon dark:hidden text-sm sm:text-base"></i>
+                <i class="fa-solid fa-sun hidden dark:block text-sm sm:text-base"></i>
               </button>
-              <button id="rtl-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition font-bold text-sm" aria-label="Toggle RTL">
+              <button id="rtl-toggle" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition font-bold text-xs sm:text-sm" aria-label="Toggle RTL">
                 RTL
               </button>
             </div>
-          </div>
-        </div>
-      </header>
+          </header>
 
-      <!-- Dashboard Container -->
-      <div class="flex-grow w-full bg-gray-50 dark:bg-gray-950 py-6 sm:py-8">
-        <div class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          
-          <!-- Page Header -->
-          <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <h1 class="text-3xl font-bold font-heading">Secure Vault Dashboard</h1>
-              <p class="text-gray-500 text-sm flex items-center gap-2 mt-1">
-                <i class="fa-solid fa-lock text-green-500"></i> Vault Status: Encrypted & Active
-              </p>
-            </div>
-            <button class="w-full md:w-auto px-5 py-2.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition shadow flex items-center justify-center gap-2">
-              <i class="fa-solid fa-plus"></i> Add Record
-            </button>
-          </div>
-
-          <!-- Section 1: Dashboard Overview -->
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
-              <div class="flex justify-between items-start mb-4">
-                <div class="text-gray-500 text-sm font-medium">Protected Accounts</div>
-                <i class="fa-solid fa-key text-indigo-500"></i>
+          <!-- Dashboard Mobile Menu Dropdown -->
+          <div id="dashboard-mobile-menu" class="hidden lg:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-xl fixed w-full left-0 z-50 top-16">
+            <nav class="px-4 pt-2 pb-6 space-y-2 max-h-[calc(100vh-4rem)] overflow-y-auto">
+              <a href="#overview" class="flex items-center gap-3 px-3 py-2.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-lg font-medium">
+                <i class="fa-solid fa-house w-5 text-center"></i> Dashboard
+              </a>
+              <a href="#accounts" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+                <i class="fa-solid fa-vault w-5 text-center"></i> Account Vault
+              </a>
+              <a href="#documents" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+                <i class="fa-solid fa-file-pdf w-5 text-center"></i> Documents
+              </a>
+              <a href="#contacts" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+                <i class="fa-solid fa-user-shield w-5 text-center"></i> Contacts
+              </a>
+              <a href="#activity" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+                <i class="fa-solid fa-clock-rotate-left w-5 text-center"></i> Activity Log
+              </a>
+              <div class="border-t border-gray-200 dark:border-gray-800 pt-4 mt-4">
+                <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition">
+                  <i class="fa-solid fa-arrow-right-from-bracket w-5 text-center"></i> Logout
+                </a>
               </div>
-              <div class="text-3xl font-bold">42</div>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
-              <div class="flex justify-between items-start mb-4">
-                <div class="text-gray-500 text-sm font-medium">Legacy Contacts</div>
-                <i class="fa-solid fa-users text-indigo-500"></i>
-              </div>
-              <div class="text-3xl font-bold">3</div>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
-              <div class="flex justify-between items-start mb-4">
-                <div class="text-gray-500 text-sm font-medium">Secure Documents</div>
-                <i class="fa-solid fa-file-shield text-indigo-500"></i>
-              </div>
-              <div class="text-3xl font-bold">12</div>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
-              <div class="flex justify-between items-start mb-4">
-                <div class="text-gray-500 text-sm font-medium">Security Score</div>
-                <i class="fa-solid fa-shield-halved text-green-500"></i>
-              </div>
-              <div class="text-3xl font-bold text-green-500">98%</div>
-            </div>
+            </nav>
           </div>
 
-          <div class="grid lg:grid-cols-3 gap-8">
-            <!-- Main Content Column -->
-            <div class="lg:col-span-2 space-y-8">
+          <!-- Scrollable Main Content -->
+          <main class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 scroll-smooth">
+            <div class="max-w-6xl mx-auto">
               
-              <!-- Section 2: Digital Account Vault -->
-              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
-                <div class="p-4 sm:p-6 border-b border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 bg-gray-50 dark:bg-gray-800/50">
-                  <h3 class="font-bold text-lg"><i class="fa-solid fa-vault text-indigo-500 mr-2"></i> Account Vault</h3>
-                  <div class="relative w-full sm:w-auto">
-                     <i class="fa-solid fa-search absolute left-3 top-2.5 text-gray-400 text-sm"></i>
-                     <input type="text" placeholder="Search accounts..." class="w-full sm:w-48 pl-9 pr-3 py-1.5 text-sm rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+              <!-- Page Header -->
+              <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <h1 class="text-3xl font-bold font-heading">Secure Vault Dashboard</h1>
+                  <p class="text-gray-500 text-sm flex items-center gap-2 mt-1">
+                    <i class="fa-solid fa-lock text-green-500"></i> Vault Status: Encrypted & Active
+                  </p>
+                </div>
+                <button class="w-full md:w-auto px-5 py-2.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition shadow flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-plus"></i> Add Record
+                </button>
+              </div>
+
+              <!-- Section 1: Dashboard Overview -->
+              <div id="overview" class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                  <div class="flex justify-between items-start mb-4">
+                    <div class="text-gray-500 text-sm font-medium">Protected Accounts</div>
+                    <i class="fa-solid fa-key text-indigo-500"></i>
                   </div>
+                  <div class="text-3xl font-bold">42</div>
                 </div>
-                <div class="overflow-x-auto max-w-full">
-                  <table class="w-full text-left text-sm">
-                    <thead class="bg-gray-50 dark:bg-gray-800/30 text-gray-500 uppercase text-xs font-bold border-b border-gray-200 dark:border-gray-800">
-                      <tr>
-                        <th class="px-3 sm:px-6 py-3">Account Name</th>
-                        <th class="px-3 sm:px-6 py-3">Category</th>
-                        <th class="px-3 sm:px-6 py-3 hidden sm:table-cell">Last Updated</th>
-                        <th class="px-3 sm:px-6 py-3 text-right">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200 dark:divide-gray-800">
-                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
-                        <td class="px-3 sm:px-6 py-4 font-medium">
-                          <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0"><i class="fa-brands fa-linkedin-in"></i></div>
-                            LinkedIn
-                          </div>
-                        </td>
-                        <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Social</span></td>
-                        <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">2 days ago</td>
-                        <td class="px-3 sm:px-6 py-4 text-right">
-                          <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
-                        </td>
-                      </tr>
-                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
-                        <td class="px-3 sm:px-6 py-4 font-medium">
-                          <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-building-columns"></i></div>
-                            Chase Bank
-                          </div>
-                        </td>
-                        <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Financial</span></td>
-                        <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">1 month ago</td>
-                        <td class="px-3 sm:px-6 py-4 text-right">
-                          <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                  <div class="flex justify-between items-start mb-4">
+                    <div class="text-gray-500 text-sm font-medium">Legacy Contacts</div>
+                    <i class="fa-solid fa-users text-indigo-500"></i>
+                  </div>
+                  <div class="text-3xl font-bold">3</div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                  <div class="flex justify-between items-start mb-4">
+                    <div class="text-gray-500 text-sm font-medium">Secure Documents</div>
+                    <i class="fa-solid fa-file-shield text-indigo-500"></i>
+                  </div>
+                  <div class="text-3xl font-bold">12</div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                  <div class="flex justify-between items-start mb-4">
+                    <div class="text-gray-500 text-sm font-medium">Security Score</div>
+                    <i class="fa-solid fa-shield-halved text-green-500"></i>
+                  </div>
+                  <div class="text-3xl font-bold text-green-500">98%</div>
                 </div>
               </div>
 
-              <!-- Section 4: Document Vault -->
-              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
-                <div class="p-6 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center bg-gray-50 dark:bg-gray-800/50">
-                  <h3 class="font-bold text-lg"><i class="fa-solid fa-file-pdf text-indigo-500 mr-2"></i> Encrypted Documents</h3>
-                  <button class="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline">Upload</button>
-                </div>
-                <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                   <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
-                     <i class="fa-solid fa-file-contract text-3xl text-gray-400"></i>
-                     <div class="min-w-0 flex-1">
-                       <h4 class="font-bold text-sm truncate">Last Will & Testament.pdf</h4>
-                       <p class="text-xs text-gray-500">2.4 MB • Legal</p>
-                     </div>
-                   </div>
-                   <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
-                     <i class="fa-solid fa-image text-3xl text-gray-400"></i>
-                     <div class="min-w-0 flex-1">
-                       <h4 class="font-bold text-sm truncate" title="Family_Photos_Archive.zip">Family_Photos_Archive.zip</h4>
-                       <p class="text-xs text-gray-500">1.2 GB • Personal</p>
-                     </div>
-                   </div>
-                </div>
-              </div>
-
-            </div>
-            
-            <!-- Sidebar Column -->
-            <div class="space-y-8">
-              
-              <!-- Section 3: Legacy Contacts -->
-              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
-                <div class="p-6 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-                  <h3 class="font-bold text-lg"><i class="fa-solid fa-user-shield text-indigo-500 mr-2"></i> Legacy Contacts</h3>
-                </div>
-                <div class="p-6 space-y-4">
-                  <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
-                    <div class="flex items-center gap-3">
-                      <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">SJ</div>
-                      <div>
-                        <h4 class="font-bold text-sm">Sarah Jenkins</h4>
-                        <p class="text-xs text-gray-500">Spouse • Full Access</p>
+              <div class="grid xl:grid-cols-3 gap-8">
+                <!-- Main Content Column -->
+                <div class="xl:col-span-2 space-y-8">
+                  
+                  <!-- Section 2: Digital Account Vault -->
+                  <div id="accounts" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <div class="p-4 sm:p-6 border-b border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 bg-gray-50 dark:bg-gray-800/50">
+                      <h3 class="font-bold text-lg"><i class="fa-solid fa-vault text-indigo-500 mr-2"></i> Account Vault</h3>
+                      <div class="relative w-full sm:w-auto">
+                         <i class="fa-solid fa-search absolute left-3 top-2.5 text-gray-400 text-sm"></i>
+                         <input type="text" placeholder="Search accounts..." class="w-full sm:w-48 pl-9 pr-3 py-1.5 text-sm rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-1 focus:ring-indigo-500">
                       </div>
                     </div>
-                    <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">MD</div>
-                      <div>
-                        <h4 class="font-bold text-sm">Michael Doe</h4>
-                        <p class="text-xs text-gray-500">Attorney • Legal Only</p>
-                      </div>
+                    <div class="overflow-x-auto max-w-full">
+                      <table class="w-full text-left text-sm">
+                        <thead class="bg-gray-50 dark:bg-gray-800/30 text-gray-500 uppercase text-xs font-bold border-b border-gray-200 dark:border-gray-800">
+                          <tr>
+                            <th class="px-3 sm:px-6 py-3">Account Name</th>
+                            <th class="px-3 sm:px-6 py-3">Category</th>
+                            <th class="px-3 sm:px-6 py-3 hidden sm:table-cell">Last Updated</th>
+                            <th class="px-3 sm:px-6 py-3 text-right">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-gray-800">
+                          <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                            <td class="px-3 sm:px-6 py-4 font-medium">
+                              <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0"><i class="fa-brands fa-linkedin-in"></i></div>
+                                LinkedIn
+                              </div>
+                            </td>
+                            <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Social</span></td>
+                            <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">2 days ago</td>
+                            <td class="px-3 sm:px-6 py-4 text-right">
+                              <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                            </td>
+                          </tr>
+                          <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                            <td class="px-3 sm:px-6 py-4 font-medium">
+                              <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-building-columns"></i></div>
+                                Chase Bank
+                              </div>
+                            </td>
+                            <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Financial</span></td>
+                            <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">1 month ago</td>
+                            <td class="px-3 sm:px-6 py-4 text-right">
+                              <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                            </td>
+                          </tr>
+                          <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                            <td class="px-3 sm:px-6 py-4 font-medium">
+                              <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0"><i class="fa-brands fa-google"></i></div>
+                                Gmail Primary
+                              </div>
+                            </td>
+                            <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Email</span></td>
+                            <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">1 week ago</td>
+                            <td class="px-3 sm:px-6 py-4 text-right">
+                              <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                            </td>
+                          </tr>
+                          <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                            <td class="px-3 sm:px-6 py-4 font-medium">
+                              <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white flex items-center justify-center flex-shrink-0"><i class="fa-brands fa-apple"></i></div>
+                                Apple ID
+                              </div>
+                            </td>
+                            <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Personal</span></td>
+                            <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">2 months ago</td>
+                            <td class="px-3 sm:px-6 py-4 text-right">
+                              <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                            </td>
+                          </tr>
+                          <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                            <td class="px-3 sm:px-6 py-4 font-medium">
+                              <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-chart-line"></i></div>
+                                Vanguard 401(k)
+                              </div>
+                            </td>
+                            <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Financial</span></td>
+                            <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">3 days ago</td>
+                            <td class="px-3 sm:px-6 py-4 text-right">
+                              <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                    <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                   </div>
-                  <button class="w-full mt-2 py-2 border border-dashed border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-500 hover:text-indigo-600 hover:border-indigo-600 transition">
-                    + Add New Contact
-                  </button>
+
+                  <!-- Section 4: Document Vault -->
+                  <div id="documents" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <div class="p-6 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center bg-gray-50 dark:bg-gray-800/50">
+                      <h3 class="font-bold text-lg"><i class="fa-solid fa-file-pdf text-indigo-500 mr-2"></i> Encrypted Documents</h3>
+                      <button class="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline">Upload</button>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                       <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
+                         <i class="fa-solid fa-file-contract text-3xl text-gray-400"></i>
+                         <div class="min-w-0 flex-1">
+                           <h4 class="font-bold text-sm truncate">Last Will & Testament.pdf</h4>
+                           <p class="text-xs text-gray-500">2.4 MB • Legal</p>
+                         </div>
+                       </div>
+                       <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
+                         <i class="fa-solid fa-image text-3xl text-gray-400"></i>
+                         <div class="min-w-0 flex-1">
+                           <h4 class="font-bold text-sm truncate" title="Family_Photos_Archive.zip">Family_Photos_Archive.zip</h4>
+                           <p class="text-xs text-gray-500">1.2 GB • Personal</p>
+                         </div>
+                       </div>
+                       <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
+                         <i class="fa-solid fa-file-invoice-dollar text-3xl text-gray-400"></i>
+                         <div class="min-w-0 flex-1">
+                           <h4 class="font-bold text-sm truncate" title="Property_Deed.pdf">Property_Deed.pdf</h4>
+                           <p class="text-xs text-gray-500">1.1 MB • Property</p>
+                         </div>
+                       </div>
+                       <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
+                         <i class="fa-solid fa-file-medical text-3xl text-gray-400"></i>
+                         <div class="min-w-0 flex-1">
+                           <h4 class="font-bold text-sm truncate" title="Health_Directives.pdf">Health_Directives.pdf</h4>
+                           <p class="text-xs text-gray-500">845 KB • Health</p>
+                         </div>
+                       </div>
+                       <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer sm:col-span-2">
+                         <i class="fa-solid fa-key text-3xl text-gray-400"></i>
+                         <div class="min-w-0 flex-1">
+                           <h4 class="font-bold text-sm truncate" title="Crypto_Wallet_Keys.txt">Crypto_Wallet_Keys.txt</h4>
+                           <p class="text-xs text-gray-500">12 KB • Financial</p>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+
+                </div>
+                
+                <!-- Sidebar / Right Column Content -->
+                <div class="space-y-8">
+                  
+                  <!-- Section 3: Legacy Contacts -->
+                  <div id="contacts" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <div class="p-6 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+                      <h3 class="font-bold text-lg"><i class="fa-solid fa-user-shield text-indigo-500 mr-2"></i> Legacy Contacts</h3>
+                    </div>
+                    <div class="p-6 space-y-4">
+                      <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
+                        <div class="flex items-center gap-3">
+                          <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">SJ</div>
+                          <div>
+                            <h4 class="font-bold text-sm">Sarah Jenkins</h4>
+                            <p class="text-xs text-gray-500">Spouse • Full Access</p>
+                          </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                      </div>
+                      <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
+                        <div class="flex items-center gap-3">
+                          <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">MD</div>
+                          <div>
+                            <h4 class="font-bold text-sm">Michael Doe</h4>
+                            <p class="text-xs text-gray-500">Attorney • Legal Only</p>
+                          </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                      </div>
+                      <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
+                        <div class="flex items-center gap-3">
+                          <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">DS</div>
+                          <div>
+                            <h4 class="font-bold text-sm">David Smith</h4>
+                            <p class="text-xs text-gray-500">Brother • Full Access</p>
+                          </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                          <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">ED</div>
+                          <div>
+                            <h4 class="font-bold text-sm">Emma Davis</h4>
+                            <p class="text-xs text-gray-500">Daughter • Limited Access</p>
+                          </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                      </div>
+                      <button class="w-full mt-2 py-2 border border-dashed border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-500 hover:text-indigo-600 hover:border-indigo-600 transition">
+                        + Add New Contact
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Section 5: Activity Log -->
+                  <div id="activity" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <div class="p-6 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+                      <h3 class="font-bold text-lg"><i class="fa-solid fa-clock-rotate-left text-indigo-500 mr-2"></i> Security Log</h3>
+                    </div>
+                    <div class="p-6">
+                      <ul class="space-y-4 relative before:absolute before:inset-y-0 before:left-2.5 before:w-px before:bg-gray-200 dark:before:bg-gray-800 pl-8">
+                        <li class="relative">
+                          <div class="absolute w-2 h-2 rounded-full bg-green-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                          <p class="text-sm font-medium">Successful Login</p>
+                          <p class="text-xs text-gray-500">Today, 10:02 AM • New York, US</p>
+                        </li>
+                        <li class="relative">
+                          <div class="absolute w-2 h-2 rounded-full bg-blue-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                          <p class="text-sm font-medium">Added new document</p>
+                          <p class="text-xs text-gray-500">Yesterday, 4:30 PM</p>
+                        </li>
+                        <li class="relative">
+                          <div class="absolute w-2 h-2 rounded-full bg-purple-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                          <p class="text-sm font-medium">Contact viewed document</p>
+                          <p class="text-xs text-gray-500">Sept 24, 2:15 PM • Sarah Jenkins accessed Last Will</p>
+                        </li>
+                        <li class="relative">
+                          <div class="absolute w-2 h-2 rounded-full bg-indigo-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                          <p class="text-sm font-medium">Security settings updated</p>
+                          <p class="text-xs text-gray-500">Sept 24, 9:00 AM • 2FA enabled</p>
+                        </li>
+                        <li class="relative">
+                          <div class="absolute w-2 h-2 rounded-full bg-yellow-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                          <p class="text-sm font-medium">Master password verified</p>
+                          <p class="text-xs text-gray-500">Sept 23, 11:15 AM</p>
+                        </li>
+                      </ul>
+                      <a href="#" class="block text-center text-sm text-indigo-600 dark:text-indigo-400 mt-6 hover:underline font-medium">View Full Log</a>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-
-              <!-- Section 5: Activity Log -->
-              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
-                <div class="p-6 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-                  <h3 class="font-bold text-lg"><i class="fa-solid fa-clock-rotate-left text-indigo-500 mr-2"></i> Security Log</h3>
-                </div>
-                <div class="p-6">
-                  <ul class="space-y-4 relative before:absolute before:inset-y-0 before:left-2.5 before:w-px before:bg-gray-200 dark:before:bg-gray-800 pl-8">
-                    <li class="relative">
-                      <div class="absolute w-2 h-2 rounded-full bg-green-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
-                      <p class="text-sm font-medium">Successful Login</p>
-                      <p class="text-xs text-gray-500">Today, 10:02 AM • New York, US</p>
-                    </li>
-                    <li class="relative">
-                      <div class="absolute w-2 h-2 rounded-full bg-blue-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
-                      <p class="text-sm font-medium">Added new document</p>
-                      <p class="text-xs text-gray-500">Yesterday, 4:30 PM</p>
-                    </li>
-                    <li class="relative">
-                      <div class="absolute w-2 h-2 rounded-full bg-yellow-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
-                      <p class="text-sm font-medium">Master password verified</p>
-                      <p class="text-xs text-gray-500">Sept 23, 11:15 AM</p>
-                    </li>
-                  </ul>
-                  <a href="#" class="block text-center text-sm text-indigo-600 dark:text-indigo-400 mt-6 hover:underline font-medium">View Full Log</a>
-                </div>
-              </div>
-
             </div>
-          </div>
+          </main>
         </div>
       </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          // Setup mobile menu toggle
+          const dashboardMenuBtn = document.getElementById('dashboard-menu-btn');
+          const dashboardMobileMenu = document.getElementById('dashboard-mobile-menu');
+          
+          if (dashboardMenuBtn && dashboardMobileMenu) {
+            dashboardMenuBtn.addEventListener('click', () => {
+              dashboardMobileMenu.classList.toggle('hidden');
+            });
+          }
+
+          // Handle active state for both sidebar and mobile menu links
+          const allNavLinks = document.querySelectorAll('aside nav a, #dashboard-mobile-menu nav a:not([href="index.html"])');
+          const activeClasses = ['bg-indigo-50', 'dark:bg-indigo-900/30', 'text-indigo-600', 'dark:text-indigo-400'];
+          const inactiveClasses = ['text-gray-600', 'dark:text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-gray-800'];
+
+          allNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+              const targetHref = link.getAttribute('href');
+              
+              // Remove active styles from all links
+              allNavLinks.forEach(l => {
+                l.classList.remove(...activeClasses);
+                l.classList.add(...inactiveClasses);
+              });
+              
+              // Add active styles to clicked links (both mobile and desktop for same href)
+              const relatedLinks = document.querySelectorAll(\`aside nav a[href="\${targetHref}"], #dashboard-mobile-menu nav a[href="\${targetHref}"]\`);
+              relatedLinks.forEach(relatedLink => {
+                relatedLink.classList.remove(...inactiveClasses);
+                relatedLink.classList.add(...activeClasses);
+              });
+              
+              // Close mobile menu if clicked inside it
+              if (dashboardMobileMenu && !dashboardMobileMenu.classList.contains('hidden')) {
+                dashboardMobileMenu.classList.add('hidden');
+              }
+            });
+          });
+        });
+      </script>
     `
   }
 };
@@ -1489,7 +1715,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close menu when clicking a link
     const mobileLinks = mobileMenu.querySelectorAll('a');
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    
     mobileLinks.forEach(link => {
+      // Highlight active link
+      const linkPath = link.getAttribute('href');
+      if (linkPath === currentPath) {
+        link.classList.add('bg-indigo-50', 'dark:bg-indigo-900/50', 'text-indigo-600', 'dark:text-indigo-400');
+        link.classList.remove('text-gray-900', 'dark:text-white', 'hover:bg-gray-50', 'dark:hover:bg-gray-800');
+      }
+
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });

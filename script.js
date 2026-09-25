@@ -64,7 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close menu when clicking a link
     const mobileLinks = mobileMenu.querySelectorAll('a');
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    
     mobileLinks.forEach(link => {
+      // Highlight active link
+      const linkPath = link.getAttribute('href');
+      if (linkPath === currentPath) {
+        link.classList.add('bg-indigo-50', 'dark:bg-indigo-900/50', 'text-indigo-600', 'dark:text-indigo-400');
+        link.classList.remove('text-gray-900', 'dark:text-white', 'hover:bg-gray-50', 'dark:hover:bg-gray-800');
+      }
+
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
