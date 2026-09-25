@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | LegacyVault - Digital Estate & Password Legacy Service</title>
+  <meta name="description" content="Secure your digital legacy, manage passwords, and ensure your loved ones have secure access to your digital estate with LegacyVault.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%234f46e5' /%3E%3Cg transform='translate(128, 128) scale(0.5)' fill='%23ffffff'%3E%3Cpath d='M256 0c-14.7 0-28.7 6-39 16.7L42.5 197.3C15.3 225 0 263.6 0 304v96c0 61.9 50.1 112 112 112h144V0z' /%3E%3Cpath opacity='0.75' d='M256 0v512h144c61.9 0 112-50.1 112-112v-96c0-40.4-15.3-79-42.5-106.7L295 16.7C284.7 6 270.7 0 256 0z' /%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            indigo: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300">
+  
+  
+
+  <main class="flex-grow flex flex-col w-full">
+    
+      <!-- Dashboard Mini Header -->
+      <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+              <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:bg-indigo-700 transition">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="font-bold text-xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+              </a>
+            </div>
+            <!-- Toggles -->
+            <div class="flex items-center gap-4">
+              <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon dark:hidden"></i>
+                <i class="fa-solid fa-sun hidden dark:block"></i>
+              </button>
+              <button id="rtl-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition font-bold text-sm" aria-label="Toggle RTL">
+                RTL
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Container -->
+      <div class="flex-grow w-full bg-gray-50 dark:bg-gray-950 py-6 sm:py-8">
+        <div class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          
+          <!-- Page Header -->
+          <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h1 class="text-3xl font-bold font-heading">Secure Vault Dashboard</h1>
+              <p class="text-gray-500 text-sm flex items-center gap-2 mt-1">
+                <i class="fa-solid fa-lock text-green-500"></i> Vault Status: Encrypted & Active
+              </p>
+            </div>
+            <button class="w-full md:w-auto px-5 py-2.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition shadow flex items-center justify-center gap-2">
+              <i class="fa-solid fa-plus"></i> Add Record
+            </button>
+          </div>
+
+          <!-- Section 1: Dashboard Overview -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+              <div class="flex justify-between items-start mb-4">
+                <div class="text-gray-500 text-sm font-medium">Protected Accounts</div>
+                <i class="fa-solid fa-key text-indigo-500"></i>
+              </div>
+              <div class="text-3xl font-bold">42</div>
+            </div>
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+              <div class="flex justify-between items-start mb-4">
+                <div class="text-gray-500 text-sm font-medium">Legacy Contacts</div>
+                <i class="fa-solid fa-users text-indigo-500"></i>
+              </div>
+              <div class="text-3xl font-bold">3</div>
+            </div>
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+              <div class="flex justify-between items-start mb-4">
+                <div class="text-gray-500 text-sm font-medium">Secure Documents</div>
+                <i class="fa-solid fa-file-shield text-indigo-500"></i>
+              </div>
+              <div class="text-3xl font-bold">12</div>
+            </div>
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+              <div class="flex justify-between items-start mb-4">
+                <div class="text-gray-500 text-sm font-medium">Security Score</div>
+                <i class="fa-solid fa-shield-halved text-green-500"></i>
+              </div>
+              <div class="text-3xl font-bold text-green-500">98%</div>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Main Content Column -->
+            <div class="lg:col-span-2 space-y-8">
+              
+              <!-- Section 2: Digital Account Vault -->
+              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <div class="p-4 sm:p-6 border-b border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 bg-gray-50 dark:bg-gray-800/50">
+                  <h3 class="font-bold text-lg"><i class="fa-solid fa-vault text-indigo-500 mr-2"></i> Account Vault</h3>
+                  <div class="relative w-full sm:w-auto">
+                     <i class="fa-solid fa-search absolute left-3 top-2.5 text-gray-400 text-sm"></i>
+                     <input type="text" placeholder="Search accounts..." class="w-full sm:w-48 pl-9 pr-3 py-1.5 text-sm rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+                  </div>
+                </div>
+                <div class="overflow-x-auto max-w-full">
+                  <table class="w-full text-left text-sm">
+                    <thead class="bg-gray-50 dark:bg-gray-800/30 text-gray-500 uppercase text-xs font-bold border-b border-gray-200 dark:border-gray-800">
+                      <tr>
+                        <th class="px-3 sm:px-6 py-3">Account Name</th>
+                        <th class="px-3 sm:px-6 py-3">Category</th>
+                        <th class="px-3 sm:px-6 py-3 hidden sm:table-cell">Last Updated</th>
+                        <th class="px-3 sm:px-6 py-3 text-right">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 dark:divide-gray-800">
+                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                        <td class="px-3 sm:px-6 py-4 font-medium">
+                          <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0"><i class="fa-brands fa-linkedin-in"></i></div>
+                            LinkedIn
+                          </div>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Social</span></td>
+                        <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">2 days ago</td>
+                        <td class="px-3 sm:px-6 py-4 text-right">
+                          <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                        </td>
+                      </tr>
+                      <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+                        <td class="px-3 sm:px-6 py-4 font-medium">
+                          <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-building-columns"></i></div>
+                            Chase Bank
+                          </div>
+                        </td>
+                        <td class="px-3 sm:px-6 py-4"><span class="px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">Financial</span></td>
+                        <td class="px-3 sm:px-6 py-4 text-gray-500 hidden sm:table-cell">1 month ago</td>
+                        <td class="px-3 sm:px-6 py-4 text-right">
+                          <button class="text-indigo-600 dark:text-indigo-400 hover:underline">Edit</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Section 4: Document Vault -->
+              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <div class="p-6 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center bg-gray-50 dark:bg-gray-800/50">
+                  <h3 class="font-bold text-lg"><i class="fa-solid fa-file-pdf text-indigo-500 mr-2"></i> Encrypted Documents</h3>
+                  <button class="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline">Upload</button>
+                </div>
+                <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                   <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
+                     <i class="fa-solid fa-file-contract text-3xl text-gray-400"></i>
+                     <div class="min-w-0 flex-1">
+                       <h4 class="font-bold text-sm truncate">Last Will & Testament.pdf</h4>
+                       <p class="text-xs text-gray-500">2.4 MB • Legal</p>
+                     </div>
+                   </div>
+                   <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-4 hover:border-indigo-500 transition cursor-pointer">
+                     <i class="fa-solid fa-image text-3xl text-gray-400"></i>
+                     <div class="min-w-0 flex-1">
+                       <h4 class="font-bold text-sm truncate" title="Family_Photos_Archive.zip">Family_Photos_Archive.zip</h4>
+                       <p class="text-xs text-gray-500">1.2 GB • Personal</p>
+                     </div>
+                   </div>
+                </div>
+              </div>
+
+            </div>
+            
+            <!-- Sidebar Column -->
+            <div class="space-y-8">
+              
+              <!-- Section 3: Legacy Contacts -->
+              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <div class="p-6 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+                  <h3 class="font-bold text-lg"><i class="fa-solid fa-user-shield text-indigo-500 mr-2"></i> Legacy Contacts</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                  <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">SJ</div>
+                      <div>
+                        <h4 class="font-bold text-sm">Sarah Jenkins</h4>
+                        <p class="text-xs text-gray-500">Spouse • Full Access</p>
+                      </div>
+                    </div>
+                    <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">MD</div>
+                      <div>
+                        <h4 class="font-bold text-sm">Michael Doe</h4>
+                        <p class="text-xs text-gray-500">Attorney • Legal Only</p>
+                      </div>
+                    </div>
+                    <button class="text-gray-400 hover:text-indigo-600"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                  </div>
+                  <button class="w-full mt-2 py-2 border border-dashed border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-500 hover:text-indigo-600 hover:border-indigo-600 transition">
+                    + Add New Contact
+                  </button>
+                </div>
+              </div>
+
+              <!-- Section 5: Activity Log -->
+              <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <div class="p-6 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+                  <h3 class="font-bold text-lg"><i class="fa-solid fa-clock-rotate-left text-indigo-500 mr-2"></i> Security Log</h3>
+                </div>
+                <div class="p-6">
+                  <ul class="space-y-4 relative before:absolute before:inset-y-0 before:left-2.5 before:w-px before:bg-gray-200 dark:before:bg-gray-800 pl-8">
+                    <li class="relative">
+                      <div class="absolute w-2 h-2 rounded-full bg-green-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                      <p class="text-sm font-medium">Successful Login</p>
+                      <p class="text-xs text-gray-500">Today, 10:02 AM • New York, US</p>
+                    </li>
+                    <li class="relative">
+                      <div class="absolute w-2 h-2 rounded-full bg-blue-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                      <p class="text-sm font-medium">Added new document</p>
+                      <p class="text-xs text-gray-500">Yesterday, 4:30 PM</p>
+                    </li>
+                    <li class="relative">
+                      <div class="absolute w-2 h-2 rounded-full bg-yellow-500 -left-[27px] top-1.5 ring-4 ring-white dark:ring-gray-900"></div>
+                      <p class="text-sm font-medium">Master password verified</p>
+                      <p class="text-xs text-gray-500">Sept 23, 11:15 AM</p>
+                    </li>
+                  </ul>
+                  <a href="#" class="block text-center text-sm text-indigo-600 dark:text-indigo-400 mt-6 hover:underline font-medium">View Full Log</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

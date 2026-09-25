@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features | LegacyVault - Digital Estate & Password Legacy Service</title>
+  <meta name="description" content="Secure your digital legacy, manage passwords, and ensure your loved ones have secure access to your digital estate with LegacyVault.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%234f46e5' /%3E%3Cg transform='translate(128, 128) scale(0.5)' fill='%23ffffff'%3E%3Cpath d='M256 0c-14.7 0-28.7 6-39 16.7L42.5 197.3C15.3 225 0 263.6 0 304v96c0 61.9 50.1 112 112 112h144V0z' /%3E%3Cpath opacity='0.75' d='M256 0v512h144c61.9 0 112-50.1 112-112v-96c0-40.4-15.3-79-42.5-106.7L295 16.7C284.7 6 270.7 0 256 0z' /%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            indigo: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300">
+  
+  
+  <!-- HEADER -->
+  <header class="fixed w-full top-0 z-50 transition-all duration-300" id="header">
+    <div class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+              <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-indigo-700 transition">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <span class="font-bold text-2xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+            </a>
+          </div>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex gap-8 items-center" id="desktop-nav">
+            <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Home 1</a>
+            <a href="home2.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Home 2</a>
+            <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">About</a>
+            <a href="blog.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Blog</a>
+            <a href="contact.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Contact</a>
+            <a href="dashboard.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Dashboard</a>
+          </nav>
+
+          <!-- Desktop Actions -->
+          <div class="hidden lg:flex items-center gap-4">
+            <!-- Toggles -->
+            <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
+              <i class="fa-solid fa-moon dark:hidden"></i>
+              <i class="fa-solid fa-sun hidden dark:block"></i>
+            </button>
+            <button id="rtl-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition font-bold text-sm" aria-label="Toggle RTL">
+              RTL
+            </button>
+
+            <!-- Auth -->
+            <a href="signup.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg font-medium transition shadow-lg shadow-indigo-600/30">Get Started</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center lg:hidden gap-4">
+            <button id="mobile-menu-btn" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 transition p-2">
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-xl absolute w-full left-0">
+      <div class="px-4 pt-2 pb-6 space-y-2">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Home 1</a>
+        <a href="home2.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Home 2</a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
+        <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Blog</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+        <a href="dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Dashboard</a>
+        
+        <div class="border-t border-gray-200 dark:border-gray-800 pt-4 mt-4 flex items-center justify-between px-3 gap-3">
+          <button id="mobile-theme-toggle" class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300">
+            <i class="fa-solid fa-moon dark:hidden"></i>
+            <i class="fa-solid fa-sun hidden dark:block"></i>
+            <span class="dark:hidden">Dark Mode</span>
+            <span class="hidden dark:inline">Light Mode</span>
+          </button>
+          <button id="mobile-rtl-toggle" class="flex-1 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm font-bold text-gray-700 dark:text-gray-300">Toggle RTL/LTR</button>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 mt-6 px-3">
+          <a href="signup.html" class="w-full flex justify-center py-2.5 bg-indigo-600 text-white rounded-lg font-medium shadow-lg shadow-indigo-600/30">Signup</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Spacer for fixed header -->
+  <div class="h-20"></div>
+
+
+  <main class="flex-grow flex flex-col w-full">
+    
+      <!-- Section 1: Alt Hero -->
+      <section class="relative pt-32 pb-32 border-b border-gray-200 dark:border-gray-800 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Dashboard Background" class="w-full h-full object-cover object-center">
+          <div class="absolute inset-0 bg-gray-900/75"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center max-w-4xl mx-auto mt-10">
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-8 text-white">
+              The Intelligent Way To Pass On Your <span class="text-indigo-400">Digital Wealth</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-10 leading-relaxed">
+              Advanced access control, encrypted document storage, and automated legacy release systems built for the modern digital era.
+            </p>
+            <div class="flex justify-center gap-4 flex-col sm:flex-row">
+              <a href="signup.html" class="px-8 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-medium transition shadow-lg text-lg">Start Planning</a>
+              <a href="contact.html" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/20 rounded-lg font-medium transition text-lg">Talk to Sales</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Vault Features -->
+      <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-16">
+            <span class="text-indigo-600 dark:text-indigo-400 font-bold tracking-wider uppercase text-sm">Core Platform</span>
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">Enterprise-Grade Vault Features</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">Organize and protect every aspect of your online identity.</p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group">
+              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Category Organization" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              </div>
+              <h3 class="font-bold text-xl mb-2">Category Organization</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">Tag and group accounts by Financial, Social, Utilities, and more for easy retrieval.</p>
+            </div>
+            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group">
+              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Document Encryption" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              </div>
+              <h3 class="font-bold text-xl mb-2">Document Encryption</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">Upload wills, trusts, and deeds. They remain encrypted until release triggers are met.</p>
+            </div>
+            <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-2xl bg-gray-50 dark:bg-gray-800/50 hover:border-indigo-300 dark:hover:border-indigo-700 transition group">
+              <div class="w-full h-40 mb-6 rounded-xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Auto-Sync Passwords" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              </div>
+              <h3 class="font-bold text-xl mb-2">Auto-Sync Passwords</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">Keep your legacy credentials up-to-date automatically using our secure browser extensions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Legacy Contact Management -->
+      <section class="py-20 bg-gray-50 dark:bg-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Granular Contact Management</h2>
+              <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                Not everyone needs access to everything. Appoint specific legacy contacts and strictly define their permission boundaries.
+              </p>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Assign your spouse to financial accounts</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Assign children to social media and photos</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Assign your attorney to legal documents</span>
+                </li>
+              </ul>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-800 h-[400px]">
+              <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team management UI" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Activity Monitoring -->
+      <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="font-heading text-3xl font-bold mb-12">Complete Activity Monitoring</h2>
+          <div class="bg-gray-900 rounded-2xl p-8 max-w-4xl mx-auto text-left shadow-2xl relative">
+            <div class="absolute top-4 left-4 flex gap-2">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <div class="mt-8 space-y-4 font-mono text-sm text-gray-300">
+              <div class="flex border-b border-gray-800 pb-2"><span class="text-indigo-400 w-40">[2026-09-25 10:02]</span> <span class="text-green-400 w-24">SUCCESS</span> <span>Vault unlocked via Biometric (Device: iPhone 16)</span></div>
+              <div class="flex border-b border-gray-800 pb-2"><span class="text-indigo-400 w-40">[2026-09-24 14:30]</span> <span class="text-blue-400 w-24">UPDATE</span> <span>Modified Legacy Contact: Sarah Jenkins</span></div>
+              <div class="flex border-b border-gray-800 pb-2"><span class="text-indigo-400 w-40">[2026-09-20 09:15]</span> <span class="text-yellow-400 w-24">REQUEST</span> <span>Access request initiated by John Doe</span></div>
+              <div class="flex"><span class="text-indigo-400 w-40">[2026-09-20 09:45]</span> <span class="text-red-400 w-24">DENIED</span> <span>Access request explicitly denied by Owner</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Trust CTA -->
+      <section class="py-24 bg-indigo-600 text-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+          <i class="fa-solid fa-shield-heart text-5xl mb-6"></i>
+          <h2 class="font-heading text-4xl font-bold mb-6">Your Legacy. Secured Forever.</h2>
+          <p class="text-indigo-100 text-lg mb-10">Join thousands of individuals who have taken the vital step of organizing their digital estate.</p>
+          <a href="signup.html" class="px-8 py-3 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-bold transition shadow-lg inline-block">Create Your Secure Account</a>
+        </div>
+      </section>
+    
+  </main>
+
+  
+  <!-- FOOTER -->
+  <footer class="bg-gray-50 dark:bg-gray-950 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
+        
+        <!-- Brand -->
+        <div class="lg:col-span-2 space-y-6">
+          <a href="index.html" class="flex items-center gap-2 group">
+            <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <span class="font-bold text-2xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+          </a>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed max-w-sm">
+            Providing peace of mind through secure digital estate planning. We protect your digital legacy, passwords, and critical accounts for the ones you trust most.
+          </p>
+          <div class="flex space-x-5">
+            <a href="#" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-xl transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-xl transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-xl transition"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-xl transition"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">About Us</a></li>
+            <li><a href="home2.html" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Features</a></li>
+            <li><a href="blog.html" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Security Blog</a></li>
+            <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider text-sm">Solutions</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Password Legacy</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Digital Vaults</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Legacy Contacts</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Family Plans</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Trust -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider text-sm">Legal & Trust</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Terms of Service</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Security Overview</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 dark:text-gray-500 text-sm">
+          &copy; 2026 LegacyVault Inc. All rights reserved. Built with military-grade encryption.
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <i class="fa-solid fa-lock text-green-500"></i>
+            <span>256-bit AES Encryption</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <i class="fa-solid fa-server text-indigo-500"></i>
+            <span>Zero-Knowledge Architecture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scroll-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-indigo-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 translate-y-10 transition-all duration-300 pointer-events-none hover:bg-indigo-700 z-40" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

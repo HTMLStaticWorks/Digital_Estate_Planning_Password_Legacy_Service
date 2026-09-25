@@ -1,2 +1,0 @@
-# Digital_Estate_Planning_Password_Legacy_Service
-Automated website repository for Digital_Estate_Planning_Password_Legacy_Service

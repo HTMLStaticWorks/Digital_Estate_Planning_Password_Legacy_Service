@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | LegacyVault - Digital Estate & Password Legacy Service</title>
+  <meta name="description" content="Secure your digital legacy, manage passwords, and ensure your loved ones have secure access to your digital estate with LegacyVault.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%234f46e5' /%3E%3Cg transform='translate(128, 128) scale(0.5)' fill='%23ffffff'%3E%3Cpath d='M256 0c-14.7 0-28.7 6-39 16.7L42.5 197.3C15.3 225 0 263.6 0 304v96c0 61.9 50.1 112 112 112h144V0z' /%3E%3Cpath opacity='0.75' d='M256 0v512h144c61.9 0 112-50.1 112-112v-96c0-40.4-15.3-79-42.5-106.7L295 16.7C284.7 6 270.7 0 256 0z' /%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            indigo: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300">
+  
+  
+  <!-- HEADER -->
+  <header class="fixed w-full top-0 z-50 transition-all duration-300" id="header">
+    <div class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+              <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-indigo-700 transition">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <span class="font-bold text-2xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+            </a>
+          </div>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex gap-8 items-center" id="desktop-nav">
+            <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Home 1</a>
+            <a href="home2.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Home 2</a>
+            <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">About</a>
+            <a href="blog.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Blog</a>
+            <a href="contact.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Contact</a>
+            <a href="dashboard.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">Dashboard</a>
+          </nav>
+
+          <!-- Desktop Actions -->
+          <div class="hidden lg:flex items-center gap-4">
+            <!-- Toggles -->
+            <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle Theme">
+              <i class="fa-solid fa-moon dark:hidden"></i>
+              <i class="fa-solid fa-sun hidden dark:block"></i>
+            </button>
+            <button id="rtl-toggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition font-bold text-sm" aria-label="Toggle RTL">
+              RTL
+            </button>
+
+            <!-- Auth -->
+            <a href="signup.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg font-medium transition shadow-lg shadow-indigo-600/30">Get Started</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center lg:hidden gap-4">
+            <button id="mobile-menu-btn" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 transition p-2">
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-xl absolute w-full left-0">
+      <div class="px-4 pt-2 pb-6 space-y-2">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Home 1</a>
+        <a href="home2.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Home 2</a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
+        <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Blog</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+        <a href="dashboard.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800">Dashboard</a>
+        
+        <div class="border-t border-gray-200 dark:border-gray-800 pt-4 mt-4 flex items-center justify-between px-3 gap-3">
+          <button id="mobile-theme-toggle" class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300">
+            <i class="fa-solid fa-moon dark:hidden"></i>
+            <i class="fa-solid fa-sun hidden dark:block"></i>
+            <span class="dark:hidden">Dark Mode</span>
+            <span class="hidden dark:inline">Light Mode</span>
+          </button>
+          <button id="mobile-rtl-toggle" class="flex-1 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm font-bold text-gray-700 dark:text-gray-300">Toggle RTL/LTR</button>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 mt-6 px-3">
+          <a href="signup.html" class="w-full flex justify-center py-2.5 bg-indigo-600 text-white rounded-lg font-medium shadow-lg shadow-indigo-600/30">Signup</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Spacer for fixed header -->
+  <div class="h-20"></div>
+
+
+  <main class="flex-grow flex flex-col w-full">
+    
+      <!-- Section 1: Hero -->
+      <section class="relative py-32 text-center overflow-hidden border-b border-gray-200 dark:border-gray-800">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Contact Us Background" class="w-full h-full object-cover object-center">
+          <div class="absolute inset-0 bg-gray-900/80"></div>
+        </div>
+        
+        <div class="max-w-3xl mx-auto px-4 relative z-10">
+          <h1 class="font-heading text-4xl md:text-5xl font-bold mb-6 text-white">Get in Touch</h1>
+          <p class="text-xl text-gray-200 leading-relaxed">Our security specialists and support team are here to help you.</p>
+        </div>
+      </section>
+
+      <!-- Section 2 & 3: Info and Form -->
+      <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Contact Info -->
+            <div>
+              <h2 class="font-heading text-3xl font-bold mb-8">Contact Information</h2>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 flex items-center justify-center rounded-xl text-xl flex-shrink-0">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg">Email Us</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-1">For general inquiries and support</p>
+                    <a href="mailto:support@legacyvault.com" class="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">support@legacyvault.com</a>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 flex items-center justify-center rounded-xl text-xl flex-shrink-0">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg">Call Us</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-1">Mon-Fri from 9am to 6pm EST</p>
+                    <a href="tel:+18005550199" class="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">+1 (800) 555-0199</a>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 flex items-center justify-center rounded-xl text-xl flex-shrink-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg">Headquarters</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                      100 Security Plaza, Suite 400<br>
+                      New York, NY 10001<br>
+                      United States
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-gray-50 dark:bg-gray-800/50 p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm">
+              <h3 class="font-bold text-2xl mb-6">Send a Message</h3>
+              <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message Sent!');">
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Full Name</label>
+                    <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Phone</label>
+                    <input type="tel" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-1">Email Address</label>
+                  <input type="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-1">Subject</label>
+                  <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-1">Message</label>
+                  <textarea rows="4" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-indigo-500 outline-none transition"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition shadow-lg">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Map -->
+      <section class="py-0">
+        <div class="w-full h-96 bg-gray-200 dark:bg-gray-800 relative">
+          <!-- Placeholder map -->
+          <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1689260555555!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+
+      <!-- Section 5: FAQ -->
+      <section class="py-16 bg-gray-50 dark:bg-gray-950">
+        <div class="max-w-4xl mx-auto px-4">
+          <h2 class="font-heading text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div class="space-y-4">
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+              <h4 class="font-bold text-lg mb-2">How secure is my data?</h4>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">We use end-to-end AES-256 encryption. Our zero-knowledge architecture ensures that not even our employees can access your unencrypted data.</p>
+            </div>
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+              <h4 class="font-bold text-lg mb-2">How does a legacy contact get access?</h4>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">A contact must request access. You specify a wait period (e.g., 7 days). If you do not explicitly deny the request within that time, the vault is released to them.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+  </main>
+
+  
+  <!-- FOOTER -->
+  <footer class="bg-gray-50 dark:bg-gray-950 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
+        
+        <!-- Brand -->
+        <div class="lg:col-span-2 space-y-6">
+          <a href="index.html" class="flex items-center gap-2 group">
+            <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <span class="font-bold text-2xl text-gray-900 dark:text-white tracking-tight">Legacy<span class="text-indigo-600 dark:text-indigo-400">Vault</span></span>
+          </a>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed max-w-sm">
+            Providing peace of mind through secure digital estate planning. We protect your digital legacy, passwords, and critical accounts for the ones you trust most.
+          </p>
+          <div class="flex space-x-5">
+            <a href="#" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-xl transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-xl transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-xl transition"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-xl transition"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">About Us</a></li>
+            <li><a href="home2.html" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Features</a></li>
+            <li><a href="blog.html" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Security Blog</a></li>
+            <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider text-sm">Solutions</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Password Legacy</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Digital Vaults</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Legacy Contacts</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Family Plans</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Trust -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider text-sm">Legal & Trust</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Terms of Service</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Security Overview</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition">Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 dark:text-gray-500 text-sm">
+          &copy; 2026 LegacyVault Inc. All rights reserved. Built with military-grade encryption.
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <i class="fa-solid fa-lock text-green-500"></i>
+            <span>256-bit AES Encryption</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <i class="fa-solid fa-server text-indigo-500"></i>
+            <span>Zero-Knowledge Architecture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scroll-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-indigo-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 translate-y-10 transition-all duration-300 pointer-events-none hover:bg-indigo-700 z-40" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
